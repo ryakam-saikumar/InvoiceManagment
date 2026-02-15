@@ -12,9 +12,9 @@ export default function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+const url=import.meta.env.VITE_Backend_URL
     try {
-      const response = await fetch("http://localhost:3000/api/auth/register", {
+      const response = await fetch(`${url}/api/auth/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
